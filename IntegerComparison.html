@@ -1,0 +1,43 @@
+<html>
+	<head>
+	
+		<title>Integer Comparison</title>
+		
+	</head>
+	
+	<body>
+			
+		<script type="text/javascript">
+		
+			var num1;
+			var num2;
+			num1 = window.prompt("Enter an integer", "0");
+			num2 = window.prompt("Now enter another", "0");
+						
+			if(parseInt(num1, 10) > parseInt(num2, 10)) {
+				document.writeln("<p> The larger of ", num1, " and ", num2, " is ", num1, ".</p>");
+			}
+			
+			if(parseInt(num2, 10) > parseInt(num1, 10)) {
+				document.writeln("<p> The larger of ", num1, " and ", num2, " is ", num2, ".</p>");
+			}
+			
+			else {
+				document.writeln("<p> The values ", num1, " and ", num2, " are equa.</p>");
+			}
+			
+		</script>
+		
+	</body>
+	
+</html>
+
+
+
+
+
+<!--Now modify your program so that the user enters the two values using a form. When the user clicks a button in the form,
+a function larger(x, y), which returns the larger of 2 values, is called. This function should be defined in the head 
+of your HTML page. You may find this slide and the one which follows it helpful. You may instead find it easier to define 
+a function larger(f) (where f is expected to be a reference to a form), which retrieves the user's values from the form, and 
+writes the result into the form -->

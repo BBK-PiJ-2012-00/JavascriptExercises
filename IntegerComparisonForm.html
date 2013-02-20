@@ -1,0 +1,79 @@
+<html>
+	<head>
+	
+		<title>Integer Comparison</title>
+		
+			<script type="text/javascript">
+				
+				function larger(x, y, f) {	//pass form as parameter to allow value to be written back to form. Can do this alternatively by giving form a unique ID and using element.getID().			
+					if (window.confirm("Are you sure?")) {
+					
+						if(parseInt(x, 10) > parseInt(y, 10)) {
+							f.result.value=x;
+						}
+			
+						else if(parseInt(y, 10) > parseInt(x, 10)) {
+							f.result.value=y;
+						}
+			
+						else {
+							f.result.value="The values are equal";
+						}
+					}
+						
+					else {
+						window.alert("Please try later")
+					}
+				}
+			</script>
+			
+		
+	</head>
+	
+	<body>
+	
+		<form>
+		<table>
+		<tr>
+			<td>Enter an integer</td>
+			<td><input type ="text" name="num1" size="15" /></td>
+		</tr>
+		
+		<tr>			
+			<td>Enter another integer</td>
+			<td><input type="text" name="num2" size="15" /></td>
+		</tr>
+		
+		<tr>
+			<td></td>
+			<td><input type="button" value="Find largest" 
+						onClick="larger(this.form.num1.value, this.form.num2.value, this.form)" /></td>
+		</tr>
+		
+				
+		<tr>
+			<td>The larger is:</td>
+			<td><input type="text" name="result" size="15" /></td>
+		</tr>
+		
+		
+		</table>
+		</form>
+	
+			
+			
+		
+		
+	</body>
+	
+</html>
+
+
+
+
+
+<!--Now modify your program so that the user enters the two values using a form. When the user clicks a button in the form,
+a function larger(x, y), which returns the larger of 2 values, is called. This function should be defined in the head 
+of your HTML page. You may find this slide and the one which follows it helpful. You may instead find it easier to define 
+a function larger(f) (where f is expected to be a reference to a form), which retrieves the user's values from the form, and 
+writes the result into the form -->
